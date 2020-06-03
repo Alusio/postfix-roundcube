@@ -30,6 +30,6 @@ COPY roundcubemail/config /var/www/html/roundcubemail/config
 
 VOLUME [ "/var/log/", "/var/vmail/", "/var/lib/mysql" ]
 
-EXPOSE 25 80 110 143 465 993 995
+EXPOSE 25 80 110 143 465 993 995 3306
 
 ENTRYPOINT /run.sh
