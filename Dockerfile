@@ -17,6 +17,7 @@ RUN apt-get update && \
     chmod 775 /var/log/ && \
     chmod +x /var/www/html/postfixadmin/scripts/postfixadmin-cli && \
     ln -s /var/www/html/postfixadmin/scripts/postfixadmin-cli /usr/bin/postfixadmin-cli
+RUN cd /var/www/html/roundcubemail/skins/ && git clone https://github.com/roundcube/elastic.git
 
 COPY roundcube_postfixadmin.sql /
 
