@@ -6,7 +6,7 @@ ENV USERS_QUOTA 50
 
 RUN apt-get update && \
     apt-get install -y git && \
-    sudo apt install node-less && \
+    sudo apt install -y node-less && \
     apt-get install -y wget postfix-mysql dovecot-mysql dovecot-imapd dovecot-pop3d dovecot-lmtpd spamassassin php5-imap postfixadmin roundcube && \
     adduser vmail -q --home /var/vmail --uid 1150 --disabled-password --gecos "" && \
     wget -q http://downloads.sourceforge.net/project/postfixadmin/postfixadmin/postfixadmin-2.93/postfixadmin-2.93.tar.gz && \
